@@ -1,8 +1,9 @@
-# EPAgent Plugins for Solaris (1.0)
+# EPAgent Plugins for Solaris (1.1)
 
 This is a series of plugins for monitoring the OS.
 
 sunDiskStats.pl - gathers I/O statistics for mount points.  
+mpstat.pl - gathers per processor statistics.  
 
 Tested with CA APM 9.7.1 EM, EPAgent 9.7.1, and Perl 5.22.
 
@@ -19,10 +20,11 @@ Follow the instructions in the EPAgent guide to setup the agent.
 
 Add stateless plugin entries to \<epa_home\>/IntroscopeEPAgent.properties.
 
-	introscope.epagent.plugins.stateless.names=DISKSTAT (can be appended to a previous entry)
-	introscope.epagent.stateless.DISKSTAT.command=perl <epa_home>/epaplugins/rhel/sunDiskStats.pl
+	introscope.epagent.plugins.stateless.names=DISKSTAT,MPSTAT (can be appended to a previous entry)
+	introscope.epagent.stateless.DISKSTAT.command=perl <epa_home>/epaplugins/sun/sunDiskStats.pl
 	introscope.epagent.stateless.DISKSTAT.delayInSeconds=900
-
+	introscope.epagent.stateless.MPSTAT.command=perl <epa_home>/epaplugins/sun/mpstat.pl
+	introscope.epagent.stateless.MPSTAT.delayInSeconds=900
 
 # Usage Instructions
 No special instructions needed for DiskStats.
@@ -47,3 +49,4 @@ Changes for each version of the field pack.
 Version | Author | Comment
 --------|--------|--------
 1.0 | Hiko Davis | First bundled version of the field packs.
+1.1 | Hiko Davis | Updated README and added mpstat monitoring.
