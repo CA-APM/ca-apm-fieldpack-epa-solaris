@@ -118,4 +118,4 @@ Temporary Items
 
 # Perl Ignore files and folders used during development
 ./post-10.5/lib/perl/Wily/*.pm
-./pre-10.5/epaplugins/lib/
+./pre-10.5/epaplugins/lib/perl/Wily/*.pm

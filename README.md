@@ -1,4 +1,4 @@
-# EPAgent/APMIA Plugins for Solaris (1.3)
+# EPAgent/APMIA Plugins for Solaris (1.5)
 
 # Description
 This is a series of plugins for monitoring the OS.
@@ -28,7 +28,7 @@ Add stateless plugin entries to &lt;epa_home&gt;/IntroscopeEPAgent.properties.
 
 	introscope.epagent.plugins.stateless.names=DISKSTAT,MPSTAT,VMSTAT (can be appended to a previous entry)
 	introscope.epagent.stateless.DISKSTAT.command=perl <epa_home>/epaplugins/solaris/sunDiskStats.pl
-	introscope.epagent.stateless.DISKSTAT.delayInSeconds=900
+	introscope.epagent.stateless.DISKSTAT.delayInSeconds=15
 	introscope.epagent.stateless.MPSTAT.command=perl <epa_home>/epaplugins/solaris/sunMpStats.pl
 	introscope.epagent.stateless.MPSTAT.delayInSeconds=900
 	introscope.epagent.stateless.VMSTAT.command=perl <epa_home>/epaplugins/solaris/sunVmStats.pl
@@ -93,6 +93,8 @@ Version | Author | Comment
 1.1 | Hiko Davis | Updated README and added mpstat monitoring.
 1.2 | Hiko Davis | Fixed mpstat.pl.
 1.3 | Hiko Davis | Added vmstat and reorganized for ACC/APMIA.
+1.4 | Hiko Davis | Updated iostat logic in sunDiskStats.pl.
+1.5 | Hiko Davis | Updated iostat interval, relabeled metric names, developer details.
 
 ## Support URL
 https://github.com/htdavis/ca-apm-fieldpack-epa-solaris
